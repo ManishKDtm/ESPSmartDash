@@ -47,7 +47,7 @@ It allows students and hobbyists to **control GPIO devices and monitor sensors**
 Documents/Arduino/libraries/
 
 ```
-## **Basic Example **
+## **Basic Example**
 ```text
 #include <ESPSmartDash.h>
 
