@@ -45,3 +45,31 @@ It allows students and hobbyists to **control GPIO devices and monitor sensors**
 
 ```text
 Documents/Arduino/libraries/
+
+```
+## **Basic Example **
+```text
+#include <ESPSmartDash.h>
+
+ESPSmartDash dash;
+
+float temperature = 25.0;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Connect to WiFi and start dashboard
+  dash.begin("WiFiSSID", "WiFiPassword");
+
+  // Add toggle, slider, and gauge
+  dash.toggle("Light", 5);
+  dash.slider("Fan", 18);
+  dash.gauge("Temperature", &temperature);
+}
+
+void loop() {
+  dash.handle();  // Handle web server requests
+}
+
+```
+
