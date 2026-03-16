@@ -1,57 +1,47 @@
-ESPSmartDash is a simple and efficient Arduino library that generates a web-based dashboard directly from your ESP device.
-With just a few lines of code, users can control GPIO pins, adjust PWM outputs, and visualize sensor data through an automatically generated interface.
+# ESPSmartDash
 
-The dashboard runs locally on the ESP device and requires no external server or cloud service, making it ideal for IoT projects, automation systems, and educational experiments.
+![Arduino](https://img.shields.io/badge/Arduino-Compatible-green)
+![PlatformIO](https://img.shields.io/badge/PlatformIO-Compatible-blue)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-Key Features
+**ESPSmartDash** is a lightweight Arduino library that automatically generates a responsive web dashboard for ESP devices.  
+It allows students and hobbyists to **control GPIO devices and monitor sensors** directly in a web browser without any cloud dependency.
 
-Automatic web dashboard generation
+---
 
-Toggle controls for GPIO devices
+## Features
 
-Slider controls for PWM outputs
+- Automatic web dashboard generation  
+- Toggle controls for digital devices (LEDs, relays, buzzers)  
+- Slider controls for PWM outputs (motors, LED brightness)  
+- Live sensor gauges with real-time auto-update  
+- Lightweight and optimized for ESP8266/ESP32  
+- Fully offline, no cloud or external server required  
+- Simple API: just define toggles, sliders, and gauges  
+- Works in Arduino IDE and PlatformIO  
 
-Live sensor gauges with auto update
+---
 
-Lightweight and optimized for embedded systems
+## Supported Hardware
 
-Compatible with ESP8266 and ESP32
+- **ESP32**  
+- **ESP8266**  
 
-Works directly in Arduino IDE
+---
 
-No cloud or external dependencies
+## Installation
 
-Example Usage
+### Arduino Library Manager
 
-#include <ESPSmartDash.h>
+1. Open **Arduino IDE**  
+2. Go to **Sketch → Include Library → Manage Libraries…**  
+3. Search for **ESPSmartDash**  
+4. Click **Install**  
 
-ESPSmartDash dash;
+### Manual Installation
 
-void setup() {
+1. Download the repository ZIP  
+2. Extract it to your Arduino libraries folder:
 
-Serial.begin(115200);
-
-dash.begin("WiFiName","WiFiPassword");
-
-dash.toggle("Light",5);
-dash.slider("Fan Speed",18);
-
-}
-
-void loop() {
-dash.handle();
-}
-
-After uploading, open the ESP IP address in your browser to access the dashboard.
-
-Ideal For
-
-IoT beginners
-
-Embedded systems students
-
-Rapid prototyping
-
-Home automation projects
-
-Sensor monitoring dashboards
+```text
+Documents/Arduino/libraries/
