@@ -72,4 +72,5 @@ void loop() {
 }
 
 ```
+<img width="1917" height="912" alt="Screenshot 2026-03-17 141323" src="https://github.com/user-attachments/assets/82946e9a-328b-46d5-8ea7-a70358e8dd25" />
 
