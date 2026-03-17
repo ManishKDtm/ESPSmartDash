@@ -21,9 +21,7 @@
 #define SD_MAX_GAUGES 10
 
 class ESPSmartDash {
-
 public:
-
   ESPSmartDash();
 
   void begin(const char* ssid, const char* pass);
@@ -35,7 +33,6 @@ public:
   void handle();
 
 private:
-
   SDWebServer server{80};
 
   ToggleWidget toggles[SD_MAX_TOGGLES];
